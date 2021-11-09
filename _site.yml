@@ -1,0 +1,12 @@
+name: "bellabeat"
+output_dir: "docs"
+navbar:
+  title: "Bellabeat"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Report"
+      href: report.html
+output:
+  html_document:
+    theme: cosmo

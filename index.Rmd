@@ -1,5 +1,5 @@
 ---
-title: "case_study_analysis_2021.11.09.v1"
+title: "index"
 author: "JK"
 date: "11/9/2021"
 #output: html_document
@@ -9,11 +9,9 @@ date: "11/9/2021"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-
 ## R Markdown
 
-From the report page.
+From the Home page.
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
@@ -31,12 +29,3 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-
-
-
-knit: (function(input_file, encoding) {
-  out_dir <- 'docs';
-  rmarkdown::render(input_file,
- encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
