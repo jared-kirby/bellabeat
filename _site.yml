@@ -3,6 +3,8 @@ output_dir: "docs"
 navbar:
   title: "Bellabeat"
   left:
+    - text: "Ask"
+      href: ask.html
     - text: "Home"
       href: index.html
     - text: "Report"
