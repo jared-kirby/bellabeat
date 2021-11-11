@@ -1,18 +1,3 @@
----
-title: "case_study_analysis_2021.11.09.v1"
-author: "JK"
-date: "11/9/2021"
-#output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-
-
-``` {r ETL, include=FALSE}
-
 rm(list = ls())
 library(pillar)
 library(plyr)
@@ -124,59 +109,3 @@ df_weightLogInfo_merged.csv$Recorded_DateTime <- mdy_hms(df_weightLogInfo_merged
 df_weightLogInfo_merged.csv$Recorded_Date <- as.Date(df_weightLogInfo_merged.csv$Recorded_DateTime)
 
 
-
-```
-
-
-
-
-
-## R Markdown
-
-How many unique users do we have?
-Does the selection of users for this study appropriately represent the population?
-What gender and age are the Fitbit users for this study?
-Do more active or less active people use Fitbit?
-
-Where could we focus marketing efforts?
-*You need to know your target audience
-*Are typical users of these products overweight or underweight or average?
-  *From this answer, what other products, YouTube searches, social media searches might this group look for?
-Are these people more or less active during certain times of the day?
-  If they are actively walking, they probably aren't actively looking at their screen?
-  Is there a better or more cost efficient time of the day to focus marketing efforts?
-  Are there certain hours of the day or days of the week/month that focusing marketing efforts    would be better for this target demographic?
-How often do users log the activities to match the distance track?
-  Could this be a metric of engagement?
-  Is it poorly designed on Fitbit app? Useful feature?
-
-
-
-
-```{r Users_Weight_Log}
-summary(df_weightLogInfo_merged.csv)
-```
-
-
-
-
-
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-
-
-
-knit: (function(input_file, encoding) {
-  out_dir <- 'docs';
-  rmarkdown::render(input_file,
- encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
